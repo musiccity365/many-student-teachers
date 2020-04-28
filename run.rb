@@ -7,7 +7,6 @@ injae = Student.new("Injae")
 michael = Student.new("Michael")
 
 paul = Teacher.new("Paul")
-paul.name 
 shannon = Teacher.new("Shannon")
 chine = Teacher.new("Chine")
 
@@ -18,16 +17,21 @@ paulinjae = TeacherStudent.new(paul, injae)
 shannonissa = TeacherStudent.new(shannon, issa)
 shannonmichael = TeacherStudent.new(shannon, michael)
 
-
 chineinjae = TeacherStudent.new(chine, injae)
 chinemichael = TeacherStudent.new(chine, michael)
 
-#print paul.students
 
-# print injae.teachers
+paul.grade_student(issa, 90)
+shannon.grade_student(issa,70)
 
-# puts shannon.grade_student(michael, 92)
+paul.grade_student(injae, 80)
+chine.grade_student(injae,60)
 
-p students.grade
-binding.pry
-0
+shannon.grade_student(michael, 70)
+chine.grade_student(michael, 50)
+
+puts issa.get_my_average_grade
+# puts injae.get_my_average_grade
+# puts michael.get_my_average_grade
+
+
